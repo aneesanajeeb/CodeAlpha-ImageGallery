@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aperture | Photography Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+
+  <header class="masthead">
+    <div class="intro">
+      <h1>Aperture</h1>
+      <p class="slogan">Where every frame tells a story.</p>
+      <p class="about">A growing collection of moments, places and flavors, seen through my lens.</p>
+      <a class="cta" href="#gallery">Explore photos</a>
+    </div>
+
+    <div class="camera-scene" id="scene">
+      <div class="camera" id="camera">
+        <svg viewBox="0 0 400 330" xmlns="http://www.w3.org/2000/svg" aria-label="3D camera illustration" role="img">
+          <defs>
+            <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b3b6b"/><stop offset="1" stop-color="#1b1b38"/></linearGradient>
+            <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7d7dbb"/><stop offset="1" stop-color="#25254a"/></linearGradient>
+            <radialGradient id="glass" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#6fd8e8"/><stop offset=".45" stop-color="#2a3f8f"/><stop offset="1" stop-color="#0c0c24"/></radialGradient>
+          </defs>
+          <rect x="60" y="72" width="56" height="34" rx="9" fill="url(#body)"/>
+          <rect x="140" y="58" width="120" height="52" rx="16" fill="url(#body)"/>
+          <rect x="290" y="68" width="46" height="20" rx="7" fill="#5eead4"/>
+          <rect x="36" y="92" width="328" height="212" rx="32" fill="url(#body)"/>
+          <rect x="36" y="150" width="328" height="110" fill="#14142c" opacity=".55"/>
+          <circle cx="330" cy="125" r="9" fill="#a78bfa"/>
+          <circle cx="70" cy="125" r="6" fill="#5eead4"/>
+          <g id="lens">
+            <circle cx="200" cy="200" r="96" fill="url(#ring)"/>
+            <circle cx="200" cy="200" r="82" fill="#101026"/>
+            <circle cx="200" cy="200" r="70" fill="url(#glass)"/>
+            <g class="blades">
+              <polygon points="200,200 200,150 238,162" fill="#0b0b22" opacity=".85"/>
+              <polygon points="200,200 238,162 250,200" fill="#16163a" opacity=".85"/>
+              <polygon points="200,200 250,200 238,238" fill="#0b0b22" opacity=".85"/>
+              <polygon points="200,200 238,238 200,250" fill="#16163a" opacity=".85"/>
+              <polygon points="200,200 200,250 162,238" fill="#0b0b22" opacity=".85"/>
+              <polygon points="200,200 162,238 150,200" fill="#16163a" opacity=".85"/>
+              <polygon points="200,200 150,200 162,162" fill="#0b0b22" opacity=".85"/>
+              <polygon points="200,200 162,162 200,150" fill="#16163a" opacity=".85"/>
+            </g>
+            <circle cx="200" cy="200" r="18" fill="#05050f"/>
+            <ellipse cx="172" cy="170" rx="16" ry="9" fill="#fff" opacity=".35" transform="rotate(-35 172 170)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input type="search" id="search" placeholder="Search all photos by name or album" aria-label="Search photos">
+  </div>
+
+  <nav class="filters" id="chips" aria-label="Categories"></nav>
+
+  <div class="area" id="gallery">
+    <div class="view-head" id="viewHead" hidden>
+      <button class="back" id="back">&#8592; Back to albums</button>
+      <h2 id="viewTitle"></h2>
+      <p id="viewDesc"></p>
+    </div>
+    <section class="grid" id="albums"></section>
+    <section class="grid" id="grid" hidden></section>
+    <p class="empty" id="empty" hidden>No photos match your search. Try another word.</p>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close" id="close" aria-label="Close">&times;</button>
+    <button class="nav prev" id="prev" aria-label="Previous photo">&#10094;</button>
+    <figure class="stage" id="stage">
+      <img id="lightbox-img" src="" alt="">
+      <figcaption><span id="cap-title"></span><span id="cap-count"></span></figcaption>
+    </figure>
+    <button class="nav next" id="next" aria-label="Next photo">&#10095;</button>
+  </div>
+
+  <footer>Aperture &copy; 2026 | Built for CodeAlpha</footer>
+  <script src="script.js"></script>
+</body>
+</html>
